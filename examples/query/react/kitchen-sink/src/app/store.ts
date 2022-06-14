@@ -32,6 +32,6 @@ export const createStore = (
 export const store = createStore()
 
 export type AppDispatch = typeof store.dispatch
-export const useAppDispatch = () => useDispatch<AppDispatch>()
+export const useAppDispatch: () => AppDispatch = useDispatch
 export type RootState = ReturnType<typeof store.getState>
 export const useTypedSelector: TypedUseSelectorHook<RootState> = useSelector
